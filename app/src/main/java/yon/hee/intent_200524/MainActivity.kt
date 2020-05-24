@@ -38,8 +38,15 @@ class MainActivity : AppCompatActivity() {
             val inputPhoneNum = phoneNumberEdt.text.toString()
 
             val myIntent = Intent(this,FourthActivity::class.java)
+            myIntent.putExtra("phone", inputPhoneNum )
+            startActivity(myIntent)
 
         }
+
+        editNickNameBtn.setOnClickListener {
+
+        }
+
     }
 
 }

@@ -3,6 +3,7 @@ package yon.hee.intent_200524
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_fourth.*
 import kotlinx.android.synthetic.main.activity_third.*
 
 class FourthActivity : AppCompatActivity() {
@@ -10,8 +11,10 @@ class FourthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fourth)
-        val phone = intent.getStringExtra("content")
-        pho
+
+
+        val phone = intent.getStringExtra("phone")
+        phoneTxt.text = phone
 
 //        val myContent = intent.getStringExtra("content")
 //
