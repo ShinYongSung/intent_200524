@@ -12,7 +12,7 @@ class ThirdActivity : AppCompatActivity() {
 
         val myContent = intent.getStringExtra("content")
 
-        val myc
+        val myNumber = intent.getIntExtra("number",-1)
         contentTxt.text = myContent
     }
 }

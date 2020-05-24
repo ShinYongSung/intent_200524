@@ -27,9 +27,18 @@ class MainActivity : AppCompatActivity() {
 
             val inputContent = contentEdt.text.toString()
             val myIntent = Intent(this, ThirdActivity::class.java)
-            myIntent.putExtra("Content", inputContent)
-            myIntent.putExtra("Number")
+            myIntent.putExtra("content", inputContent)
+            myIntent.putExtra("number", -1)
             startActivity(myIntent)
+        }
+
+//        품번을 입력받아서, 네번째 액티비티 (fourthActivity)
+
+        goToFourthBtn.setOnClickListener {
+            val inputPhoneNum = phoneNumberEdt.text.toString()
+
+            val myIntent = Intent(this,FourthActivity::class.java)
+
         }
     }
 

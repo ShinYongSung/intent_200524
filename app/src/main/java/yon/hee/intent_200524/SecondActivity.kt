@@ -13,5 +13,6 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
         goBackBtn.setOnClickListener {
             finish()
+        }
     }
 }
