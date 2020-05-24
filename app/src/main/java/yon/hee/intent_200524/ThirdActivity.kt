@@ -12,6 +12,7 @@ class ThirdActivity : AppCompatActivity() {
 
         val myContent = intent.getStringExtra("content")
 
+        val myc
         contentTxt.text = myContent
     }
 }
