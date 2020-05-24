@@ -1,5 +1,6 @@
 package yon.hee.intent_200524
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -48,6 +49,18 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(myIntent, 1000)
         }
 
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1000) {
+            if (resultCode == Activity.RESULT_OK) {
+
+                val newNickName = data?.getStringExtra("nick")
+
+                nickNameTxt.text = newNickName
+            }
+        }
     }
 
 }
